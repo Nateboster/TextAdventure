@@ -1,0 +1,58 @@
+*{
+    font-family: 'Josefin Sans', sans-serif;
+}
+h2{
+    font-family: 'Julius Sans One', sans-serif;
+}
+body{
+    background-image: url("../img/ep_naturalwhite.png");
+
+}
+#game-text{
+    width: 600px;
+    max-height: 650px;
+    text-align: center;
+    margin: 5em auto 0 auto;
+    background-image: linear-gradient(to right, rgba(245, 245, 245, 0), whitesmoke, rgba(245, 245, 245, 0));
+    /*background: rgb(255,255,255);*/
+    /*background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(245,245,245,1) 20%, rgba(245,245,245,1) 80%, rgba(255,255,255,0) 100%);*/
+    border-top: 1px dashed gray;
+    border-bottom: 1px dashed gray;
+
+}
+input {
+    width: 150px;
+    padding:5px;
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    text-align: center;
+    border-style: none;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+    border-color: gray;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(245,245,245,1) 20%, rgba(245,245,245,1) 80%, rgba(255,255,255,0) 100%);
+    /*background: linear-gradient(to right, rgba(245, 245, 245, 0), whitesmoke, rgba(245, 245, 245, 0));*/
+
+}
+.command-div{
+    margin-top: 25px;
+}
+/*#out {*/
+    /*height: 100px;*/
+/*}*/
+
+/*.game-text{*/
+    /*display:flex;*/
+    /*flex-direction:column;*/
+    /*height:100%;*/
+/*}*/
+/*.test{*/
+    /*flex: 1;*/
+    /*height:100%;*/
+    /*overflow: auto;*/
+    /*display: flex;*/
+    /*flex-direction: column-reverse;*/
+/*}*/
+
+
