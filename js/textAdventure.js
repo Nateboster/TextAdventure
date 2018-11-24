@@ -1,6 +1,6 @@
 
 var currentRoom = "E3";
-var help = ["go (direction)","take (item name)","inventory"];
+var help = ["go (direction)","take (item name)","inventory or inv"];
 var inventory = [];
 
 function changeRoom(dir){
@@ -34,34 +34,6 @@ function showInventory() {
     $('#game-text').append("</ul></p>");
 }
 
-const out = document.getElementById("game-text")
-// const isScrolledToBottom = out.scrollHeight - out.clientHeight <= out.scrollTop + 1
-// if (isScrolledToBottom) {
-//     out.scrollTop = out.scrollHeight - out.clientHeight
-// }
-let c = 0
-
-setInterval(function() {
-    // allow 1px inaccuracy by adding 1
-    const isScrolledToBottom = out.scrollHeight - out.clientHeight <= out.scrollTop + 1
-
-    const newElement = document.createElement("div")
-
-    newElement.textContent = format(c++, 'Bottom position:', out.scrollHeight - out.clientHeight,  'Scroll position:', out.scrollTop)
-
-    // out.appendChild(newElement)
-    $('#game-text').append("<p>Test</p>");
-
-    // scroll to bottom if isScrolledToBottom is true
-    if (isScrolledToBottom) {
-        out.scrollTop = out.scrollHeight - out.clientHeight
-    }
-}, 500)
-
-function format () {
-    return Array.prototype.slice.call(arguments).join(' ')
-}
-
 function playerInput(input){
     var command = input.split(" ")[0];
     switch(command){
@@ -72,6 +44,8 @@ function playerInput(input){
         case "help" :
             showHelp();
             break;
+        case "inv":
+            //fallthrough
         case "inventory":
             showInventory();
             break;
@@ -79,6 +53,9 @@ function playerInput(input){
             $('#game-text').append("<p>Invalid command.</p>");
     }
 }
+
+const out = document.getElementById("game-text");
+const isScrolledToBottom = out.scrollHeight - out.clientHeight <= out.scrollTop + 1
 
 $(document).ready(function() {
     $('#game-text').append("<p>" + rooms.E3.description +"<p>");
@@ -88,6 +65,9 @@ $(document).ready(function() {
             var input = $('#user-input').val().toLowerCase();
             $('#user-input').val("");
             playerInput(input)
+        }
+        if (isScrolledToBottom) {
+            out.scrollTop = out.scrollHeight - out.clientHeight
         }
     })
 })

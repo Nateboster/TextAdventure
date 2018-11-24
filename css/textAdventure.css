@@ -6,20 +6,34 @@ h2{
 }
 body{
     background-image: url("../img/ep_naturalwhite.png");
-
+}
+em{
+    font-weight: bolder;
+}
+li{
+    text-align: left;
+    margin-left: 38%;
+    list-style-type: circle;
 }
 #game-text{
     width: 600px;
-    max-height: 650px;
+    max-height: 400px;
     text-align: center;
     margin: 5em auto 0 auto;
     background-image: linear-gradient(to right, rgba(245, 245, 245, 0), whitesmoke, rgba(245, 245, 245, 0));
-    /*background: rgb(255,255,255);*/
-    /*background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(245,245,245,1) 20%, rgba(245,245,245,1) 80%, rgba(255,255,255,0) 100%);*/
     border-top: 1px dashed gray;
     border-bottom: 1px dashed gray;
 
 }
+/*-----custom scrollbar-----*/
+/*::-webkit-scrollbar{*/
+    /*width: 3px;*/
+/*}*/
+/*::-webkit-scrollbar-thumb{*/
+    /*background: linear-gradient(rgba(245, 245, 245, 0), lightgray, rgba(245, 245, 245, 0));*/
+
+/*}*/
+/*--------------------------*/
 input {
     width: 150px;
     padding:5px;
@@ -32,27 +46,9 @@ input {
     border-bottom: 1px dashed black;
     border-color: gray;
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(245,245,245,1) 20%, rgba(245,245,245,1) 80%, rgba(255,255,255,0) 100%);
-    /*background: linear-gradient(to right, rgba(245, 245, 245, 0), whitesmoke, rgba(245, 245, 245, 0));*/
 
 }
 .command-div{
     margin-top: 25px;
 }
-/*#out {*/
-    /*height: 100px;*/
-/*}*/
-
-/*.game-text{*/
-    /*display:flex;*/
-    /*flex-direction:column;*/
-    /*height:100%;*/
-/*}*/
-/*.test{*/
-    /*flex: 1;*/
-    /*height:100%;*/
-    /*overflow: auto;*/
-    /*display: flex;*/
-    /*flex-direction: column-reverse;*/
-/*}*/
-
 
