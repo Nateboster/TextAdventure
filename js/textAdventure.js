@@ -34,6 +34,15 @@ function showInventory() {
     $('#game-text').append("</ul></p>");
 }
 
+function takeItem(itemName) {
+    if(rooms[currentRoom].items[itemName] !== undefined){
+        inventory.push(itemName);
+        $('#game-text').append("<p>You pick up the " + itemName + "</p>");
+    }else{
+        $('#game-text').append("<p>There's nothing to take.</p>");
+    }
+}
+
 function playerInput(input){
     var command = input.split(" ")[0];
     switch(command){
@@ -43,6 +52,10 @@ function playerInput(input){
             break;
         case "help" :
             showHelp();
+            break;
+        case "take" :
+            var itemName = input.split(" ")[1];
+            takeItem(itemName);
             break;
         case "inv":
             //fallthrough

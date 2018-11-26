@@ -158,6 +158,9 @@ var rooms = {
             "north": "D3",
             "east": "E4",
             "west": "E2"
+        },
+        "items":{
+            "sword": "sword"
         }
     },
     "E4" : {
